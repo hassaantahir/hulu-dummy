@@ -1,6 +1,8 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-export default {
+export const attachApiKey = `?api_key=${API_KEY}&language=en-US`;
+
+export const requests = {
     fetchTrending: {
         title: 'Trending',
         url: `/trending/all/week?api_key=${API_KEY}&language=en-US`
