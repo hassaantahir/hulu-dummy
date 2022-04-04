@@ -8,11 +8,11 @@ import moment from "moment";
 
 const MovieDetail = ({detail}) => {
     const BASE_URL = "https://image.tmdb.org/t/p/original";
-    
+
     return (
         <>
             {detail.title ?
-                <div className={'p-2 group grid grid-cols-2 gap-4 pt-20 mx-16'}>
+                <div className={'p-2 group grid grid-cols-2 gap-4 py-20 mx-16'}>
                     <Link href={`/detailPage/${detail?.id}`}>
                         <Image
                             className={'rounded-3xl'}
@@ -28,7 +28,7 @@ const MovieDetail = ({detail}) => {
                         />
                     </Link>
 
-                    <div className={'p-2'}>
+                    <div className={'p-2 pt-0'}>
                         <h2 className={'mt-1 text-5xl text-white font-bold'}>
                             {detail.title || detail.original_name}
                         </h2>
@@ -36,8 +36,8 @@ const MovieDetail = ({detail}) => {
                             <DetailItem title={'Overview'} value={detail.overview}/>
                         }
                         {detail?.genres &&
-                            <div className={'flex pt-5'}>
-                                <p className={'w-1/6 font-bold'}>Genre:</p>
+                            <div className={'flex pt-2 2xl:pt-5'}>
+                                <p className={'w-1/5 font-bold'}>Genre:</p>
                                 <p className={'w-full'}>
                                     {detail?.genres.map((item, index) => {
                                         return detail?.genres.length === index + 1 ? item.name : `${item.name}, `

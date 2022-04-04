@@ -6,8 +6,8 @@ const DetailItem = ({title, value, link}) => {
         <>
             {value &&
             link ?
-                <div className={'flex pt-5'}>
-                    <p className={'w-1/6 font-bold'}>{title}:</p>
+                <div className={'flex pt-2 2xl:pt-5'}>
+                    <p className={'w-1/5 font-bold'}>{title}:</p>
                     <p className={'w-full'}>
                         <Link href={value}>
                             <a target="_blank" rel="noreferrer">
@@ -16,8 +16,8 @@ const DetailItem = ({title, value, link}) => {
                         </Link>
                     </p>
                 </div> :
-                <div className={'flex pt-5'}>
-                    <p className={'w-1/6 font-bold'}>{title}:</p>
+                <div className={'flex pt-2 2xl:pt-5'}>
+                    <p className={'w-1/5 font-bold'}>{title}:</p>
                     <p className={'w-full'}>{value}</p>
                 </div>
 
